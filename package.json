@@ -1,0 +1,25 @@
+{
+  "name": "mb.mbfw.scss",
+  "version": "0.1.0",
+  "description": "The MBFW is the Mediablox framework for developing responsive web sites. It is based on the awesome InuitCSS by Harry Roberts, and has been extended to include ui components and other additional features. The core part of the framework is this scss module. Additional components can be added via the mb.mbfw.components which will include additional the scss and js files that make up the components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediablox/mb.mbfw.scss.git"
+  },
+  "author": "Dean Morgan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mediablox/mb.mbfw.scss/issues"
+  },
+  "homepage": "https://github.com/mediablox/mb.mbfw.scss#readme",
+  "devDependencies": {
+    "release-it": "^12.3.6"
+  },
+  "dependencies": {
+    "inuitcss": "^6.0.0"
+  }
+}
