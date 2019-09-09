@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/mediablox/mb.mbfw.scss#readme",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "release-it": "^12.3.6"
   },
   "dependencies": {
