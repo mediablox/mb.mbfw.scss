@@ -1,0 +1,5 @@
+.u-overflow {
+	overflow: auto;
+	&--hidden {overflow: hidden;}
+	&--scroll {overflow: scroll;}
+}
