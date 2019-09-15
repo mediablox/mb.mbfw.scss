@@ -96,9 +96,11 @@
 
 // ELEMENTS
 @import "elements/elements.page";
+@import "elements/elements.typography";
 @import "elements/elements.headings";
 @import "elements/elements.images";
 @import "elements/elements.tables";
+@import "elements/elements.misc";
 
 
 // OBJECTS
@@ -138,3 +140,6 @@ $inuit-offsets: true;
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
+@import "utilities/utilities.overflow";
+@import "utilities/utilities.text-align";
+@import "utilities/utilities.text-transforms";
