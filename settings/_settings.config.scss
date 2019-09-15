@@ -6,9 +6,9 @@
 // feature switches, etc. in here.
 
 $inuit-config: (
-  env: dev,
-  healthcheck: false,
-  debug: true,
+	env: dev,
+	healthcheck: false,
+	debug: true,
 );
 
 // You can access data in this map using the following function:
@@ -20,5 +20,166 @@ $inuit-config: (
 // @if (inuit-config(debug) == true) { ...  }
 
 @function inuit-config($key) {
-  @return map-get($inuit-config, $key);
+	@return map-get($inuit-config, $key);
 }
+
+/* ==========================================================================
+   #MEDIA QUIRIES
+   ========================================================================== */
+
+// To enable support for browsers that do not support @media queries,
+// (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+// Create a separate stylesheet served exclusively to these browsers,
+// meaning @media queries will be rasterized, relying on the cascade itself
+$mq-responsive: true;
+
+// Name your breakpoints in a way that creates a ubiquitous language
+// across team members. It will improve communication between
+// stakeholders, designers, developers, and testers.
+$mq-breakpoints: (
+	mobile: 320px,
+	tablet: 740px,
+	desktop: 980px,
+	wide: 1300px,
+	// Tweakpoints
+		desktopAd: 810px,
+	mobileLandscape: 480px
+);
+
+// Define the breakpoint from the $mq-breakpoints list that should
+// be used as the target width when outputting a static stylesheet
+// (when $mq-responsive is set to 'false').
+$mq-static-breakpoint: desktop;
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width. For example: (mobile, tablet, desktop).
+$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+/* ==========================================================================
+   #FRACTIONS
+   ========================================================================== */
+
+// Which fractions would you like in your grid system(s)? By default, inuitcss
+// provides you fractions of one whole, halves, thirds, quarters and fifths,
+// e.g.:
+//
+//   .u-1/2
+//   .u-2/5
+//   .u-3/4
+//   .u-2/3
+
+$inuit-fractions: 1 2 3 4 5;
+
+/* ==========================================================================
+   #RATIO
+   ========================================================================== */
+
+// A list of aspect ratios that get generated as modifier classes.
+// You should predefine it with only the ratios and names your project needs.
+//
+// The map keys are the strings used in the generated class names, and they can
+// follow any convention, as long as they are properly escaped strings. i.e.:
+//
+//   $inuit-ratios: (
+//     "2\\:1"         : (2:1),
+//     "4-by-3"        : (4:3),
+//     "full-hd"       : (16:9),
+//     "card-image"    : (2:3),
+//     "golden-ratio"  : (1.618:1) -> non-integers are okay
+//   );
+
+$inuit-ratios: (
+	"2\\:1": (
+		2: 1
+	),
+	"4\\:3": (
+		4: 3
+	),
+	"16\\:9": (
+		16: 9
+	)
+);
+
+/* ==========================================================================
+   #CROP
+   ========================================================================== */
+
+// A list of cropping ratios that get generated as modifier classes.
+// You should predefine it with only the ratios and names your project needs.
+//
+// The map keys are the strings used in the generated class names, and they can
+// follow any convention, as long as they are properly escaped strings. i.e.:
+//
+//   $inuit-crops: (
+//     "2\\:1"         : (2:1),
+//     "4-by-3"        : (4:3),
+//     "full-hd"       : (16:9),
+//     "card-image"    : (2:3),
+//     "golden-ratio"  : (1.618:1) -> non-integers are okay
+//   );
+
+$inuit-crops: (
+	"2\\:1": (
+		2: 1
+	),
+	"4\\:3": (
+		4: 3
+	),
+	"16\\:9": (
+		16: 9
+	)
+);
+
+/* ==========================================================================
+   #RESPONSIVE-SPACINGS
+   ========================================================================== */
+
+/**
+ * Utility classes enhancing the normal spacing classes by adding responsiveness
+ * to them. By default, there are not responsive spacings defined. You can
+ * generate responsive spacings by adding entries to the following three Sass
+ * maps, e.g.:
+ *
+ *   $inuit-responsive-spacing-directions: (
+ *     null: null,
+ *     bottom: bottom,
+ *   );
+ *
+ *   $inuit-responsive-spacing-properties: (
+ *     "margin": "margin",
+ *   );
+ *
+ *   $inuit-responsive-spacing-sizes: (
+ *     "-small": $inuit-global-spacing-unit-small,
+ *   );
+ *
+ * This would bring us the following classes:
+ *
+ *   .u-margin-small@mobile {}
+ *   .u-margin-small@tablet {}
+ *   .u-margin-small@desktop {}
+ *   .u-margin-small@wide {}
+ *   .u-margin-bottom-small@mobile {}
+ *   .u-margin-bottom-small@tablet {}
+ *   .u-margin-bottom-small@desktop {}
+ *   .u-margin-bottom-small@wide {}
+ *
+ * You can change the generated CSS classes by further extending the Sass maps.
+ * If you want every ‘normal’ spacing (those from `utilities.spacings`) also as
+ * a responsive version, you can just mirror the ‘normal’ spacings:
+ *
+ *   $inuit-responsive-spacing-directions: $inuit-spacing-directions !default;
+ *
+ *   $inuit-responsive-spacing-properties: $inuit-spacing-properties !default;
+ *
+ *   $inuit-responsive-spacing-sizes: $inuit-spacing-sizes !default;
+ *
+ * BUT BE AWARE: This can generate a huge chunk of extra CSS, depending on the
+ * amount of breakpoints you defined. So please check your CSS’ output and
+ * filesize!
+ */
+
+$inuit-responsive-spacing-directions: ();
+$inuit-responsive-spacing-properties: ();
+$inuit-responsive-spacing-sizes: ();
