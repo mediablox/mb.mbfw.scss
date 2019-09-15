@@ -1,0 +1,39 @@
+.o-layout {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	&__header {
+		order: 1;
+	}
+	&__body {
+		flex-grow: 1;
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		@include mq($from: tablet) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+	&__main {
+		flex-grow: 1;
+		@include mq($from: desktop) {
+			order: 2;
+		}
+	}
+	&__sidebar {
+		&--left {
+			@include mq($from: desktop) {
+				order: 1;
+			}
+		}
+		&--right {
+			@include mq($from: desktop) {
+				order: 3;
+			}
+		}
+	}
+	&__footer {
+		order: 3;
+	}
+}
