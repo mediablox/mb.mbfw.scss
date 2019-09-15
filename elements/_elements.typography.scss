@@ -1,0 +1,17 @@
+/* ==========================================================================
+   # TYPOGRAPHY
+	 ========================================================================== */
+
+$mb-font-family: sans-serif !default;
+
+html {
+	font-family: $mb-font-family;
+}
+
+pre {
+	font-size: 0.8rem;
+	white-space: pre-line;
+	border: 0.1rem solid rgba(119, 119, 119, 0.3);
+	border-radius: $global-radius;
+	padding: 0.5rem;
+}
