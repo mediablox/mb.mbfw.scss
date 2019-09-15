@@ -1,0 +1,66 @@
+/* ==========================================================================
+   #RESPONSIVE VISIBILITY
+   ========================================================================== */
+
+/**
+ * Utility classes to easily hide content at different breakpoints:
+ *
+ *   <p class="u-hidden--medium-up">ensure this looks purrty</p>
+ *
+ */
+
+// Hide for mobile only
+.u-hidden--mobile-only {
+	@include mq($until: tablet) {
+		display: none !important;
+	}
+}
+
+// Hide for tablet only
+.u-hidden--tablet-only {
+	@include mq($from: tablet, $until: desktop) {
+		display: none !important;
+	}
+}
+
+// Hide for desktop only
+.u-hidden--desktop-only {
+	@include mq($from: desktop, $until: wide) {
+		display: none !important;
+	}
+}
+
+// Hide for wide only
+.u-hidden--wide-only {
+	@include mq($from: wide) {
+		display: none !important;
+	}
+}
+
+// Hide from tablet upwards
+.u-hidden--tablet-up {
+	@include mq($from: tablet) {
+		display: none !important;
+	}
+}
+
+// Hide from desktop upwards
+.u-hidden--desktop-up {
+	@include mq($from: desktop) {
+		display: none !important;
+	}
+}
+
+// Hide from tablet down
+.u-hidden--tablet-down {
+	@include mq($from: mobile, $until: desktop) {
+		display: none !important;
+	}
+}
+
+// Hide from desktop down
+.u-hidden--desktop-down {
+	@include mq($from: mobile, $until: wide) {
+		display: none !important;
+	}
+}
