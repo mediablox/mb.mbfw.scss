@@ -2,32 +2,59 @@
   #COLOR
   ========================================================================== */
 
-$color-palette: (
-	// Main Colors
-	primary:                  #2942b6,
-	secondary:                #bb1f39,
+	$color-palette: (
+		// Main Colors
+		primary:                  #2942b6,
+		secondary:                #bb1f39,
+		cta:											#03a103,
+	) !default;
 
-	// Alert Colors
-	alert:                    #ca1010,
-	warning:                  #e4cf18,
-	success:                  #15920a,
-	info:                     #2d88f0,
+	$alert-colors: (
+		// Alert Colors
+		alert:                    #ca1010,
+		warning:                  #e4cf18,
+		success:                  #15920a,
+		info:                     #2d88f0,
+	) !default;
 
-	// Grey Tones
-	black:									#0a0a0a,
-	dark-grey:								#111111,
-	medium-grey:							#848484,
-	light-grey:								#cccccc,
-	white:									#fefefe,
-) !default;
+	$grey-tones: (
+		// Grey Tones
+		black:										#0a0a0a,
+		dark-grey:								#111111,
+		medium-grey:							#848484,
+		light-grey:								#cccccc,
+		white:										#fefefe,
+	) !default;
 
-// Allow the colours in the palette to be accessed in an array like fashion
-// e.g. color: color(primary);
-@function color($key) {
-	@if map-has-key($color-palette, $key) {
-		@return map-get($color-palette, $key);
+	// Allow the colours in the palette to be accessed in an array like fashion
+	// e.g. color: color(primary);
+	@function color($key) {
+		@if map-has-key($color-palette, $key) {
+			@return map-get($color-palette, $key);
+		}
+		@else {
+			@error 'given $key is not available in $color-palette';
+		}
 	}
-	@else {
-		@error 'given $key is not available in $color-palette';
+
+	// Allow the colours in the palette to be accessed in an array like fashion
+	// e.g. color: alert-color(warning);
+	@function alert-color($key) {
+		@if map-has-key($alert-colors, $key) {
+			@return map-get($alert-colors, $key);
+		}
+		@else {
+			@error 'given $key is not available in $alert-colors';
+		}
 	}
-}
+
+	// Allow the colours in the palette to be accessed in an array like fashion
+	// e.g. color: tone(black);
+	@function tone($key) {
+		@if map-has-key($grey-tones, $key) {
+			@return map-get($grey-tones, $key);
+		}
+		@else {
+			@error 'given $key is not available in $grey-tones';
+		}
+	}
