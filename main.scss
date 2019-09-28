@@ -75,9 +75,10 @@
  */
 
 // SETTINGS
-@import "settings/settings.config";
+@import "settings/settings.config"; // mbfw.scss
 @import "settings/settings.core";
-@import "settings/settings.global";
+@import "settings/settings.global"; // mbfw.scss
+@import "settings/settings.color"; // mbfw.scss
 
 
 // TOOLS
@@ -85,6 +86,7 @@
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
 @import "node_modules/sass-mq/mq";
+@import "tools/tools.aliases"; // mbfw.scss
 
 
 // GENERIC
@@ -96,18 +98,18 @@
 
 // ELEMENTS
 @import "elements/elements.page";
-@import "elements/elements.typography";
+@import "elements/elements.typography"; // mbfw.scss
 @import "elements/elements.headings";
 @import "elements/elements.images";
 @import "elements/elements.tables";
-@import "elements/elements.misc";
+@import "elements/elements.misc"; // mbfw.scss
 
 
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
 @import "objects/objects.wrapper";
-@import "objects/objects.layout";
+@import "objects/objects.layout"; // mbfw.scss
 @import "objects/objects.media";
 @import "objects/objects.flag";
 @import "objects/objects.list-bare";
@@ -118,7 +120,7 @@
 @import "objects/objects.crop";
 @import "objects/objects.table";
 @import "objects/objects.pack";
-@import "objects/objects.flex";
+@import "objects/objects.flex"; // mbfw.scss
 
 
 // COMPONENTS
@@ -133,14 +135,15 @@
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.
 // Only set this to `true` if you are absolutely sure about what you are doing.
-$inuit-offsets: true;
+$inuit-offsets: false;
 @import "utilities/utilities.widths";
 @import "utilities/utilities.headings";
 @import "utilities/utilities.spacings";
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
-@import "utilities/utilities.overflow";
-@import "utilities/utilities.text-align";
-@import "utilities/utilities.text-transforms";
-@import "utilities/utilities.responsive-visibility";
+@import "utilities/utilities.overflow"; // mbfw.scss
+@import "utilities/utilities.text-align"; // mbfw.scss
+@import "utilities/utilities.text-transforms"; // mbfw.scss
+@import "utilities/utilities.responsive-visibility"; // mbfw.scss
+@import "utilities/utilities.wrapper"; // mbfw.scss

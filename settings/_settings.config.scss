@@ -18,7 +18,6 @@ $inuit-config: (
 // Example usage:
 //
 // @if (inuit-config(debug) == true) { ...  }
-
 @function inuit-config($key) {
 	@return map-get($inuit-config, $key);
 }
