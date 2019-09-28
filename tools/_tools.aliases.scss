@@ -1,6 +1,6 @@
-// Reassign `$inuit-global-spacing-unit` to `$mb-spacing`.
-$mb-spacing: $inuit-global-spacing-unit;
-$mb-spacing-tiny: $inuit-global-spacing-unit-tiny;
-$mb-spacing-small: $inuit-global-spacing-unit-small;
-$mb-spacing-large: $inuit-global-spacing-unit-large;
-$mb-spacing-huge: $inuit-global-spacing-unit-huge;
+// Reassign `$inuit-global-spacing-unit` to `$global-spacing`.
+$global-spacing: $inuit-global-spacing-unit;
+$global-spacing-tiny: $inuit-global-spacing-unit-tiny;
+$global-spacing-small: $inuit-global-spacing-unit-small;
+$global-spacing-large: $inuit-global-spacing-unit-large;
+$global-spacing-huge: $inuit-global-spacing-unit-huge;
