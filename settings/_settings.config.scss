@@ -22,6 +22,26 @@ $inuit-config: (
 	@return map-get($inuit-config, $key);
 }
 
+/*==========================================================================
+  #COLOR
+  ========================================================================== */
+
+$color-primary: #2942b6;
+$color-secondary: #bb1f39;
+$color-cta: #03a103;
+
+$color-alert: #ca1010;
+$color-warning: #e4cf18;
+$color-success: #15920a;
+$color-info: #2d88f0;
+
+$color-black: #0a0a0a;
+$color-dark-grey: #111111;
+$color-medium-grey: #848484;
+$color-light-grey: #cccccc;
+$color-white: #fefefe;
+
+
 /* ==========================================================================
    #MEDIA QUIRIES
    ========================================================================== */
