@@ -2,10 +2,12 @@
    # TYPOGRAPHY
 	 ========================================================================== */
 
-$mb-font-family: sans-serif !default;
+$mb-font-body: sans-serif !default;
+$mb-font-heading: sans-serif !default;
+
 
 html {
-	font-family: $mb-font-family;
+	font-family: $mb-font-body;
 }
 
 pre {
